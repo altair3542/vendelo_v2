@@ -52,4 +52,18 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'PS4 Slim', products(:ps4).reload.title
   end
 
+  test 'render a edit product form with errors' do
+    patch product_path(products(:ps4)), params: { product: { title: '' } }
+    assert_response :unprocessable_entity
+    assert_select 'form'
+  end
+
+  test 'delete a product' do
+    assert_difference 'Product.count', -1 do
+      delete product_path(products(:ps4))
+    end
+    assert_redirected_to products_path
+    assert_equal 'Tu producto se ha eliminado correctamente.', flash[:notice]
+  end
+
 end
