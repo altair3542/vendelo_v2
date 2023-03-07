@@ -3,4 +3,5 @@
 <p class = 'description'><%= @product.description %></p>
 
 <%= link_to 'Editar', edit_product_path(@product.id), class: 'edit' %>
-
+<%= link_to 'Eliminar', product_path(@product.id), method: :delete, data: { turbo_method: :delete, turbo_confirm: '¿Estás seguro?'
+}, class: 'delete' %>
