@@ -44,6 +44,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'form'
   end
-  
+
+  test 'update a product' do
+    patch product_path(products(:ps4)), params: { product: { title: 'PS4 Slim' } }
+    assert_redirected_to products_path
+    assert_equal 'Tu producto se ha actualizado correctamente.', flash[:notice]
+    assert_equal 'PS4 Slim', products(:ps4).reload.title
+  end
 
 end
