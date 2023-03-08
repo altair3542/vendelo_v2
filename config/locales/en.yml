@@ -23,6 +23,7 @@ en:
               not_a_number: 'Is not a number'
   common:
     confirm: 'Are you sure?'
+    back: 'Go back'
   products:
     edit:
       title: 'Edit product'
@@ -36,3 +37,20 @@ en:
       updated: 'Your product has been updated successfully.'
     destroy:
       destroyed: 'Your product has been deleted successfully.'
+
+
+
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+      new: 'New'
+    index:
+      title: 'Categories'
+    new:
+      title: 'New category'
+    edit:
+      title: 'Edit category'
+    create: 'Your category has been created successfully.'
+    update: 'Your category has been updated successfully.'
+    destroy: 'Your category has been deleted successfully.'
