@@ -8,7 +8,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'render a list of products' do
     get products_path
     assert_response :success
-    assert_select '.product', 2
+    assert_select '.product', 3
+    assert_select '.category', 3
+  end
+
+  test 'render a list of products filtered by category' do
+    get products_path(cathegory_id: categories(:computers).id)
+    assert_response :success
+    assert_select '.product', 1
   end
 
   test 'render a detailed product page' do
@@ -16,7 +23,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.title', 'PS4 Fat'
     assert_select '.description', 'PS4 en buen estado'
-    assert_select '.price', '$150'
+    assert_select '.price', '150'
   end
 
   test 'render a new product form' do
@@ -27,7 +34,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test 'create a new product' do
     assert_difference 'Product.count', 1 do
-      post products_path, params: { product: { title: 'PS5', description: 'PS5 en buen estado', price: 400 } }
+      post products_path, params: { product: { title: 'PS5', description: 'PS5 en buen estado', price: 400, category_id: categories(:videogames).id } }
     end
     assert_redirected_to products_path
     assert_equal 'Tu producto se ha creado correctamente.', flash[:notice]

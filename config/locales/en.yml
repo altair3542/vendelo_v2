@@ -1,56 +1,60 @@
 en:
   activerecord:
     models:
-      product: 'Product'
+      product: Product
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-        created_at: 'Created at'
-        updated_at: 'Updated at'
     errors:
       models:
         product:
           attributes:
             title:
-              blank: 'Can not be blank'
+              blank: "can't be blank"
             description:
-              blank: 'Can not be blank'
+              blank: "can't be blank"
             price:
-              blank: 'Can not be blank'
-              not_a_number: 'Is not a number'
+              blank: "can't be blank"
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+  shared:
+    header:
+      add: 'Add product'
   products:
     edit:
       title: 'Edit product'
     new:
-      title: 'New product'
+      title: 'Add product'
     index:
-      title: 'Products'
+      title: 'Products:'
+      all: 'All'
+    show:
+      edit: 'Edit product'
+      delete: 'Delete product'
     create:
-      created: 'Your product has been created successfully.'
+      created: 'Your product has been successfully created'
     update:
-      updated: 'Your product has been updated successfully.'
+      updated: 'Your product has been successfully updated'
     destroy:
-      destroyed: 'Your product has been deleted successfully.'
-
-
-
+      destroyed: 'Your product has been successfully destroyed'
   categories:
     category:
       edit: 'Edit'
       delete: 'Delete'
-      new: 'New'
     index:
       title: 'Categories'
-    new:
-      title: 'New category'
+      new: 'Add category'
     edit:
       title: 'Edit category'
-    create: 'Your category has been created successfully.'
-    update: 'Your category has been updated successfully.'
-    destroy: 'Your category has been deleted successfully.'
+    create:
+      created: 'Your category has been successfully created'
+    update:
+      updated: 'Your category has been successfully updated'
+    destroy:
+      destroyed: 'Your category has been successfully destroyed'
+    new:
+      title: 'New category'
