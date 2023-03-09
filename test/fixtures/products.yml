@@ -9,11 +9,11 @@ ps4:
 switch:
   title: Nintendo Switch
   description: le falla el lector de sd
-  price: 100
+  price: 195
   category: videogames
 
 macbook:
   title: MacBook Pro 2018
   description: MacBook Pro 2018 en buen estado
-  price: 200
+  price: 250
   category: computers
