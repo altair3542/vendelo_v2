@@ -1,6 +1,15 @@
 class Product < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_full_text, against: {
+    title: 'A',
+    description: 'B'
+  }
+
   has_one_attached :photo
-  validates :title, :description, :price, presence: true
-  validates :price, numericality: { greater_than: 0 }
+
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+
   belongs_to :category
 end
