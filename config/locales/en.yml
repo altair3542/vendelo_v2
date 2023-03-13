@@ -24,6 +24,7 @@ en:
   shared:
     header:
       add: 'Add product'
+      categories: 'Categories'
   products:
     edit:
       title: 'Edit product'

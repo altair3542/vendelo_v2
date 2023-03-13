@@ -4,8 +4,25 @@ videogames:
   name: Videojuegos
 
 computers:
-  name: Computación
-
+  name: Computacion
 
 vehicles:
   name: Vehiculos
+
+clothes:
+  name: Ropa
+
+music:
+  name: Música
+
+electronic:
+  name: Electrónica
+
+books:
+  name: Libros
+
+mobile:
+  name: Móviles
+
+sports:
+  name: Deportes
