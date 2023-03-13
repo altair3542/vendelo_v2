@@ -35,6 +35,9 @@ es:
       min_price: 'Precio mínimo'
       max_price: 'Precio máximo'
       query_text: '¿Qué quieres buscar?'
+      expensive: 'Mayor precio primero'
+      cheapest: 'Menor precio primero'
+      newest: 'Nuevo primero'
     show:
       edit: 'Editar producto'
       delete: 'Borrar producto'
