@@ -27,6 +27,10 @@ en:
     header:
       add: 'Add product'
       categories: 'Categories'
+  authentication:
+    users:
+      create:
+        created: 'Your account has been successfully created'
   products:
     edit:
       title: 'Edit product'
